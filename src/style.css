@@ -186,16 +186,66 @@ body {
   width: 35%;
 }
 
+.col img,
+img.secured-payments {
+  display: block;
+  margin: 0 20px 20px 50px;
+  width: 15%;
+}
+
 /* footer */
 footer .follow img {
-  width: 1%;
+  display: inline-block;
+  margin: 0;
+  width: 4.5%;
 }
 
-img .badges {
-  width: 50%;
-  height: 50%;
+img.badges {
+  display: block;
+  width: 80%;
+  margin: 0 20px;
 }
 
-img .secured-payments {
-  width: 10%;
+img.secured-payments {
+  display: inline-block;
+  width: 100%;
+  padding-right: 100px;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the start of the column */
+  padding: 10px;
+}
+
+.col a {
+  display: block;
+  text-decoration: none; /* Remove underlines */
+  margin-bottom: 5px; /* Add some spacing between links */
+  color: #333; /* Set the text color */
+}
+
+.h4-font {
+  font-size: 1.5rem; /* Adjust the font size as needed */
+  font-weight: bold; /* Make the heading bold */
+  margin-bottom: 10px; /* Add spacing below the heading */
+}
+
+footer {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto; /* Adjust this property */
+  grid-gap: 10px;
+  margin-top: 50px;
+}
+
+/* Apply double width to the first column in the first row */
+.col:first-child {
+  grid-column: span 2; /* Double width */
+}
+
+.copy-right {
+  grid-column: span 5;
+  padding: 10px;
+  text-align: center;
 }
