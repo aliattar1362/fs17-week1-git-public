@@ -12,6 +12,32 @@
   font-weight: bold;
   line-height: 64px;
   color: #222;
+
+  /* animation */
+  overflow: hidden; /* Hide overflow to create typing effect */
+  border-right: 2px solid #000; /* Create a cursor effect */
+  white-space: nowrap; /* Prevent text from wrapping */
+
+  animation: typing 2s steps(30, end), blink-caret 0.5s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 30%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #000;
+  }
 }
 
 .h2-font {
@@ -105,6 +131,18 @@ body {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  /* animation */
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 #hero .h4-font {
@@ -186,18 +224,21 @@ body {
   width: 35%;
 }
 
-.col img,
+/* footer */
+
+footer .logo,
 img.secured-payments {
   display: block;
   margin: 0 20px 20px 50px;
   width: 15%;
 }
 
-/* footer */
-footer .follow img {
+footer #x-logo {
   display: inline-block;
   margin: 0;
-  width: 4.5%;
+  position: relative;
+  bottom: -2px;
+  width: 5%;
 }
 
 img.badges {
@@ -209,7 +250,10 @@ img.badges {
 img.secured-payments {
   display: inline-block;
   width: 100%;
-  padding-right: 100px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  right: 2px;
 }
 .col {
   display: flex;
@@ -219,16 +263,23 @@ img.secured-payments {
 }
 
 .col a {
+  font-size: 15px;
   display: block;
   text-decoration: none; /* Remove underlines */
   margin-bottom: 5px; /* Add some spacing between links */
   color: #333; /* Set the text color */
 }
 
-.h4-font {
+footer .h4-font {
   font-size: 1.5rem; /* Adjust the font size as needed */
   font-weight: bold; /* Make the heading bold */
   margin-bottom: 10px; /* Add spacing below the heading */
+  padding-bottom: 20px;
+}
+
+footer p {
+  font-size: 13px;
+  margin: 0 0 8px 0;
 }
 
 footer {
@@ -248,4 +299,44 @@ footer {
   grid-column: span 5;
   padding: 10px;
   text-align: center;
+}
+
+footer .follow {
+  margin-top: 20px;
+}
+
+footer .follow i {
+  color: #465b52;
+  padding-right: 4px;
+  cursor: pointer;
+}
+
+/* Start Media Query */
+@media (max-width: 799px) {
+}
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 768px) {
+  #header {
+    padding: 15px;
+  }
+
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #navbar li {
+    padding: 10px 0;
+  }
+
+  #hero {
+    background-size: 50%; /* Adjust background size for smaller screens */
+    padding: 0 20px; /* Adjust padding for smaller screens */
+  }
+
+  #hero button {
+    padding: 10px 40px; /* Adjust button padding for smaller screens */
+    font-size: 14px; /* Adjust button font size for smaller screens */
+  }
 }
