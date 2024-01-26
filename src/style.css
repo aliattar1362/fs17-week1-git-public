@@ -161,20 +161,7 @@ body {
 }
 
 #hero button:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-}
-
-#hero {
-  background-size: 50%;
-  /* Adjust background size for smaller screens */
-  padding: 0 20px;
-  /* Adjust padding for smaller screens */
-}
-#hero button {
-  padding: 10px 40px;
-  /* Adjust button padding for smaller screens */
-  font-size: 14px;
-  /* Adjust button font size for smaller screens */
+  box-shadow: 10px 10px 20px 0px rgba(150, 28, 28, 0.5);
 }
 
 /* Newsletter */
@@ -232,7 +219,7 @@ body {
 }
 
 #newsLetter button:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  box-shadow: 10px 10px 20px 0px green;
 }
 
 #newsLetter .form {
@@ -339,5 +326,17 @@ footer .follow i {
   }
   #navbar li {
     padding: 10px 0;
+  }
+  #hero {
+    background-size: 50%;
+    /* Adjust background size for smaller screens */
+    padding: 0 20px;
+    /* Adjust padding for smaller screens */
+  }
+  #hero button {
+    padding: 10px 40px;
+    /* Adjust button padding for smaller screens */
+    font-size: 14px;
+    /* Adjust button font size for smaller screens */
   }
 }
