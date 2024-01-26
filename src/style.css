@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
-
 * {
   margin: 0;
   padding: 0;
@@ -12,12 +11,13 @@
   font-weight: bold;
   line-height: 64px;
   color: #222;
-
   /* animation */
-  overflow: hidden; /* Hide overflow to create typing effect */
-  border-right: 2px solid #000; /* Create a cursor effect */
-  white-space: nowrap; /* Prevent text from wrapping */
-
+  overflow: hidden;
+  /* Hide overflow to create typing effect */
+  border-right: 2px solid #000;
+  /* Create a cursor effect */
+  white-space: nowrap;
+  /* Prevent text from wrapping */
   animation: typing 2s steps(30, end), blink-caret 0.5s step-end infinite;
 }
 
@@ -29,7 +29,6 @@
     width: 30%;
   }
 }
-
 @keyframes blink-caret {
   from,
   to {
@@ -39,7 +38,6 @@
     border-color: #000;
   }
 }
-
 .h2-font {
   display: block;
   margin: 0;
@@ -123,7 +121,7 @@ body {
 
 /* Home Page */
 #hero {
-  background: url(./img/hero.jpg) right center no-repeat;
+  background: url(../img/hero.jpg) right center no-repeat;
   height: 75vh;
   background-size: 30%;
   padding: 0 80px;
@@ -144,7 +142,6 @@ body {
     opacity: 1;
   }
 }
-
 #hero .h4-font {
   padding-bottom: 15px;
 }
@@ -164,7 +161,7 @@ body {
 }
 
 #hero button:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  box-shadow: 10px 10px 20px 0px rgba(150, 28, 28, 0.5);
 }
 
 /* Newsletter */
@@ -217,6 +214,12 @@ body {
   white-space: nowrap;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
+  cursor: pointer;
+  text-shadow: 0 1px 5px #333;
+}
+
+#newsLetter button:hover {
+  box-shadow: 10px 10px 20px 0px green;
 }
 
 #newsLetter .form {
@@ -225,20 +228,11 @@ body {
 }
 
 /* footer */
-
 footer .logo,
 img.secured-payments {
   display: block;
   margin: 0 20px 20px 50px;
   width: 15%;
-}
-
-footer #x-logo {
-  display: inline-block;
-  margin: 0;
-  position: relative;
-  bottom: -2px;
-  width: 5%;
 }
 
 img.badges {
@@ -255,25 +249,33 @@ img.secured-payments {
   position: relative;
   right: 2px;
 }
+
 .col {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Align items to the start of the column */
+  align-items: flex-start;
+  /* Align items to the start of the column */
   padding: 10px;
 }
 
 .col a {
   font-size: 15px;
   display: block;
-  text-decoration: none; /* Remove underlines */
-  margin-bottom: 5px; /* Add some spacing between links */
-  color: #333; /* Set the text color */
+  text-decoration: none;
+  /* Remove underlines */
+  margin-bottom: 5px;
+  /* Add some spacing between links */
+  color: #333;
+  /* Set the text color */
 }
 
 footer .h4-font {
-  font-size: 1.5rem; /* Adjust the font size as needed */
-  font-weight: bold; /* Make the heading bold */
-  margin-bottom: 10px; /* Add spacing below the heading */
+  font-size: 1.5rem;
+  /* Adjust the font size as needed */
+  font-weight: bold;
+  /* Make the heading bold */
+  margin-bottom: 10px;
+  /* Add spacing below the heading */
   padding-bottom: 20px;
 }
 
@@ -285,14 +287,16 @@ footer p {
 footer {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: auto; /* Adjust this property */
+  grid-template-rows: auto;
+  /* Adjust this property */
   grid-gap: 10px;
   margin-top: 50px;
 }
 
 /* Apply double width to the first column in the first row */
 .col:first-child {
-  grid-column: span 2; /* Double width */
+  grid-column: span 2;
+  /* Double width */
 }
 
 .copy-right {
@@ -311,32 +315,28 @@ footer .follow i {
   cursor: pointer;
 }
 
-/* Start Media Query */
-@media (max-width: 799px) {
-}
-
 /* Media Queries for Responsive Design */
 @media screen and (max-width: 768px) {
   #header {
     padding: 15px;
   }
-
   #navbar {
     flex-direction: column;
     align-items: flex-start;
   }
-
   #navbar li {
     padding: 10px 0;
   }
-
   #hero {
-    background-size: 50%; /* Adjust background size for smaller screens */
-    padding: 0 20px; /* Adjust padding for smaller screens */
+    background-size: 50%;
+    /* Adjust background size for smaller screens */
+    padding: 0 20px;
+    /* Adjust padding for smaller screens */
   }
-
   #hero button {
-    padding: 10px 40px; /* Adjust button padding for smaller screens */
-    font-size: 14px; /* Adjust button font size for smaller screens */
+    padding: 10px 40px;
+    /* Adjust button padding for smaller screens */
+    font-size: 14px;
+    /* Adjust button font size for smaller screens */
   }
 }
